@@ -1,0 +1,93 @@
+<html>
+
+<head>
+
+<title>Contact Us</title>
+<link rel="stylesheet" type="text/css" href="mainstyle.css">
+
+
+<script>
+  
+function checkboxes()
+   {
+	var firstName = document.getElementById("fName").value;
+	var lastName = document.getElementById("lName").value;
+	var eMail = document.getElementById("email").value;
+	var Terms = document.getElementById("agree").value;
+	if(firstName == "")
+		{
+			document.getElementById("fName").style.backgroundColor = "red";
+			
+			document.getElementById("fName").focus();
+		}
+   
+		
+	if(lastName == "")
+		{
+			document.getElementById("lName").style.backgroundColor = "red";
+			if (firstName !== ""){
+				document.getElementById("lName").focus();
+						}
+		}
+   	if(eMail == "")
+		{
+			document.getElementById("email").style.backgroundColor = "red";
+			if (firstName !== "" && lastName !== ""){
+				document.getElementById("email").focus();
+						}
+		}
+	if(document.getElementById("agree")== unchecked)
+		{
+			document.getElementById("agree").style.backgroundColor = "red";
+			if (firstName !== "" && lastName !== "" && eMail !== ""){
+				document.getElementById("agree").focus();
+						}
+		}
+
+
+}
+
+
+
+</script>
+
+
+</head>
+
+<body>
+
+<h1>Jace Reddick</h1>
+<h2>Contact Us</h2>
+
+
+</header>
+<br>
+<hr>
+
+
+<h3 style="color:silver;">Please fill out the following to contact us:</h3>
+
+ <form action="nextPage.html" type="Post">
+    First Name: <input type="text" id="fName"><br>
+    Last Name: <input type="text" id="lName"><br>
+    Email: <input type="text" id="email"><br>
+    <!-- add another input box -->
+    <button id="mySubmit" type="button" onclick='checkboxes();'>Submit</button>
+
+    <h2 class="accept">Do you accept the terms and conditions?</h2>
+    <input type="checkbox" name="yes" id="agree" unchecked>Yes<br>
+  </form>
+
+<a href="homepage.html" class="linkback" target="_blank">HomePage</a>
+
+
+
+
+
+
+
+
+ 
+</body>
+
+</html>
